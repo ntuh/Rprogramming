@@ -1,3 +1,7 @@
+# From swirl: "You can pass functions as arguments to other functions just like you can pass
+# data to functions."
+# This is basically what is done in this scribt, by first making a matrix in the first function,
+# which is then used in  cacheSolve function afterwards
 
 makeCacheMatrix <- function(Matrice = matrix()) {
       invers <- NULL
@@ -12,6 +16,8 @@ makeCacheMatrix <- function(Matrice = matrix()) {
       getinv <- function() return(invers);
       return(list(set = set, get = get, setinv = setinv, getinv = getinv))
 }
+
+#we see that the matrix "matrice" is passed on to the second function
 
 cacheSolve <- function(Matrice, ...) {
       invers <- Matrice$getinv()
