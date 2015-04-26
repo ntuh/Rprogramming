@@ -19,6 +19,11 @@ makeCacheMatrix <- function(Matrice = matrix()) {
 
 #we see that the matrix "matrice" is passed on to the second function
 
+# In the following function, notice the elipis as te last argument.
+# from swirl: "The ellipses can be used to pass on arguments to other functions that are
+# used within the function you're writing. Usually a function that has the 
+# ellipses as an argument has the ellipses as the last argument."
+
 cacheSolve <- function(Matrice, ...) {
       invers <- Matrice$getinv()
       if(!is.null(invers)) {
